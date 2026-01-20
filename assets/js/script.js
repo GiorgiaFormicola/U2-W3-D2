@@ -9,9 +9,10 @@ const showUsername = function () {
 
 const saveFunction = function () {
   const inputUserValue = document.getElementById("username").value;
-  console.log(inputUserValue);
   localStorage.setItem("saved-user", inputUserValue);
   showUsername();
+  const form = document.querySelector("form");
+  form.reset();
 };
 
 const saveButton = document.getElementById("save");
